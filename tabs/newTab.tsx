@@ -34,7 +34,8 @@ const DeltaTab = () => {
         hello: "Please send me something."
       }
     })
-    setContentsResponse(contentsRes && "undefined")
+    console.log(`contentsRes: ${contentsRes}`)
+    setContentsResponse(contentsRes ?? "undefined")
   }
 
   return (
