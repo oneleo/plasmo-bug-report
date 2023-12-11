@@ -11,11 +11,11 @@ const OnMessage = () => {
   const [contentsRequest, setContentsRequest] = useState<string>("")
 
   const { data } = useMessage<string, string>(async (req, res) => {
-    console.log(`[contents] data: ${JSON.stringify(data, null, 2)}`)
-    console.log(`[contents] req: ${JSON.stringify(req, null, 2)}`)
+    console.log(`[contents][hook] data: ${JSON.stringify(data, null, 2)}`)
+    console.log(`[contents][hook] req: ${JSON.stringify(req, null, 2)}`)
 
     setContentsRequest(JSON.stringify(req, null, 2))
-    res.send(`[contents] This is not the undefined thing.`)
+    res.send(`[contents][hook] This is not the undefined thing.`)
   })
 
   return (
